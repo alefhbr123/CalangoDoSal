@@ -113,9 +113,15 @@
         .nav-container {
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
             padding: 0 1rem;
             position: relative;
+        }
+
+        @media (max-width: 767px) {
+            .nav-container {
+                justify-content: center;
+            }
         }
 
         .logo {
@@ -124,8 +130,13 @@
             gap: 0.5rem;
             text-decoration: none;
             color: inherit;
-            position: absolute;
-            left: 1rem;
+        }
+
+        @media (max-width: 767px) {
+            .logo {
+                position: absolute;
+                left: 1rem;
+            }
         }
 
         .logo span:first-child {
@@ -146,7 +157,7 @@
         }
 
         .nav-menu {
-            display: flex;
+            display: none;
             list-style: none;
             gap: 2rem;
             align-items: center;
@@ -195,6 +206,8 @@
             border: none;
             cursor: pointer;
             color: inherit;
+            position: absolute;
+            right: 1rem;
         }
 
         @media (min-width: 768px) {
