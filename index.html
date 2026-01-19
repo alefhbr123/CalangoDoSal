@@ -667,7 +667,48 @@
             transform: scale(1.05);
         }
 
-        /* Amenities Section */
+        /* Video Section */
+        .video-section {
+            background-color: var(--background);
+        }
+
+        .video-container {
+            display: grid;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        @media (min-width: 1024px) {
+            .video-container {
+                grid-template-columns: 1fr 1fr;
+                gap: 5rem;
+            }
+        }
+
+        .video-wrapper {
+            border-radius: 2rem;
+            overflow: hidden;
+            box-shadow: 0 20px 60px -12px rgba(0, 153, 204, 0.3);
+            aspect-ratio: 2160 / 3840;
+            max-width: 350px;
+            margin: 0 auto;
+            border: 3px solid rgba(0, 153, 204, 0.2);
+            background: linear-gradient(135deg, rgba(0, 153, 204, 0.05), rgba(74, 155, 111, 0.05));
+            transition: all 0.4s ease;
+            transform: scale(1);
+        }
+
+        .video-wrapper:hover {
+            box-shadow: 0 30px 80px -12px rgba(0, 153, 204, 0.4);
+            transform: scale(1.02);
+            border-color: rgba(0, 153, 204, 0.4);
+        }
+
+        .video-wrapper video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
         .amenities-section {
             background-color: var(--sand-light);
         }
@@ -1162,6 +1203,45 @@
                     </div>
                     <div class="gallery-item">
                         <img src="quarto.JPG" alt="Praia privada">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="piscina2.JPG" alt="Praia privada">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="exteriorquarto.JPG" alt="Praia privada">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="quarto4.JPG" alt="Praia privada">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Section -->
+        <section id="video" class="video-section">
+            <div class="container-custom section-padding">
+                <span class="section-label" style="display: block; text-align: center; margin-bottom: 1rem;">Vídeo da Casa</span>
+                <h2 class="section-title" style="text-align: center; margin-bottom: 3rem;">Conheça o Calango do Sal em Movimento</h2>
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <video controls>
+                            <source src="videoCalangoOFICIAL.mp4" type="video/mp4">
+                            Seu navegador não suporta vídeos HTML5.
+                        </video>
+                    </div>
+                    <div>
+                        <p class="section-text">
+                            Assista a um tour completo pelo Calango do Sal e descubra cada detalhe pensado para tornar sua estadia inesquecível. Ambientes amplos, suítes confortáveis, área de lazer completa e uma atmosfera perfeita para relaxar perto do mar.
+                        </p>
+                        <p class="section-text">
+                            Cada espaço foi planejado para oferecer conforto, praticidade e aquele clima de férias que faz toda a diferença. No vídeo, você vai entender por que esta é a escolha ideal para descansar, curtir e criar boas memórias à beira-mar.
+                        </p>
+                        <a href="https://wa.me/559191426080" target="_blank" rel="noopener noreferrer" class="btn-primary" style="display: inline-flex; margin-top: 1.5rem;">
+                            Fazer Reserva
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </div>
